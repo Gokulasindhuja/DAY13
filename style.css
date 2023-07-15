@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Wallpoet&display=swap");
+
+* {
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s;
+}
+
+body {
+  background-color: #fff;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  user-select: none;
+  transition: 0.3s;
+}
+
+.container {
+  width: 400px;
+  height: 500px;
+  border-radius: 5px;
+  box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.255);
+}
+
+.value {
+  position: relative;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 20%;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.3),
+    inset -15px -15px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  overflow: hidden;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+.problem {
+  position: absolute;
+  width: 93%;
+  height: 45%;
+}
+
+.solution {
+  position: absolute;
+  bottom: 10px;
+  width: 93%;
+  height: 35%;
+  text-align: right;
+}
+
+.button {
+  position: relative;
+  margin-top: 20px;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  height: 60%;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
+
+span {
+  display: grid;
+  place-content: center;
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.1),
+    -15px -15px 20px rgba(255, 255, 255, 0.1);
+  width: 90%;
+  height: 90%;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #5b5959, 0 0px 60px #ffffff;
+  font-size: 20px;
+}
+
+.clear {
+  background-color: #f9ca24 !important;
+  color: black;
+}
+
+.plus {
+  grid-row: span 2;
+  background-color: #22a6b3 !important;
+  color: black;
+}
+
+.symbol {
+  font-size: 20px;
+}
+
+.equal {
+  background-color: #2ecc71 !important;
+  color: black;
+  font-size: 30px;
+}
+
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(0, 255, 255, 0.484);
+  cursor: pointer;
+  transition: 0.3s;
+  border-left: 4px solid #f1c40f;
+  border-right: 4px solid #f1c40f;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+  animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.toggle:hover {
+  width: 40px;
+  height: 40px;
+}
+
+/*************** media querry  ************* */
+@media (max-width: 400px) {
+  .container {
+    width: 375px;
+  }
+  .clear {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 375px) {
+  .container {
+    width: 360px;
+  }
+}
